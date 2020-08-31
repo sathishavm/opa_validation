@@ -1,0 +1,17 @@
+[
+  {
+    "id": "Zendesk.OpaValidationPlugin",
+    "description": "An example of a plugin that provides an extension to an interface that is not an extension point.",
+    "provider": "https://github.com/claymccoy",
+    "releases": [
+        {
+            "version": "2.21.0",
+            "date": "2020-08-30T23:06:42.114228Z",
+            "requires": "orca>=8.0.0",
+            "sha512sum": "7f97ff0bca90e793ac9bb229c1be3cba72bb8daab2e62d641108390229642b46a12c6fc3977f13e8b7865a8265199c065f1f3e83cef287a946b24c8ff74961ce",
+            "state": "RELEASE",
+            "url": "https://github.com/sathishavm/opa_validation/releases/download/v1/zendeskOpaValidation-2.21.0.zip"
+        }
+    ]
+  }
+]
