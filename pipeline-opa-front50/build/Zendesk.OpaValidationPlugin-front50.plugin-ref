@@ -1,0 +1,10 @@
+{
+    "pluginPath": "/Users/ssubramanian/Code/spinnaker/spinnaker-pipeline-opa/pipeline-opa-front50/build/tmp/jar",
+    "classesDirs": [
+        "/Users/ssubramanian/Code/spinnaker/spinnaker-pipeline-opa/pipeline-opa-front50/build/classes/java/main",
+        "/Users/ssubramanian/Code/spinnaker/spinnaker-pipeline-opa/pipeline-opa-front50/build/resources/main"
+    ],
+    "libsDirs": [
+        "/Users/ssubramanian/Code/spinnaker/spinnaker-pipeline-opa/pipeline-opa-front50/build/lib"
+    ]
+}

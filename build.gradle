@@ -1,0 +1,27 @@
+plugins {
+  id("io.spinnaker.plugin.bundler").version("$spinnakerGradleVersion")
+}
+
+spinnakerBundle {
+  pluginId = "Zendesk.OpaValidationPlugin"
+  description = "An example of a plugin that provides an extension to an interface that is not an extension point."
+  provider = "https://github.com/claymccoy"
+  version = rootProject.version
+}
+
+version = normalizedVersion()
+
+subprojects {
+  group = "io.zendesk.pipeline.validation"
+  version = rootProject.version
+}
+
+String normalizedVersion() {
+  String fullVersion = "2.21.0"
+  String normalized = fullVersion.split("-").first()
+  if (fullVersion.contains("dirty")) {
+    return "$normalized-SNAPSHOT"
+  } else {
+    return normalized
+  }
+}

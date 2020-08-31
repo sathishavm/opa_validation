@@ -1,0 +1,44 @@
+apply plugin: "io.spinnaker.plugin.service-extension"
+apply plugin: "maven-publish"
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+  jcenter()
+  maven { url "http://dl.bintray.com/spinnaker/spinnaker/" }
+}
+
+spinnakerPlugin {
+  serviceName = "front50"
+  pluginClass = "io.zendesk.pipeline.validation"
+  requires = "orca>=8.0.0"
+}
+
+dependencies {
+  // implementation(project(":pipeline-opa-front50"))
+  
+  compileOnly (group: 'com.netflix.spinnaker.kork', name: 'kork-secrets', version: "${korkVersion}")
+  compileOnly (group: 'com.netflix.spinnaker.kork', name: 'kork-plugins-api', version: "${korkVersion}")
+  compileOnly (group: 'com.netflix.spinnaker.front50', name: 'front50-core', version: "${front50Version}")
+  compileOnly (group: 'com.netflix.spinnaker.front50', name: 'front50-web', version: "${front50Version}")
+  compileOnly (group: 'org.springframework', name: 'spring-context', version: '5.2.8.RELEASE')
+  compileOnly(group: 'org.pf4j', name: 'pf4j', version: "${pf4jVersion}")
+
+  compileOnly 'org.projectlombok:lombok:+'
+  annotationProcessor 'org.projectlombok:lombok:+'
+
+  annotationProcessor(group: 'org.pf4j', name: 'pf4j', version: "${pf4jVersion}")
+
+  testImplementation 'junit:junit:4.12'
+  testImplementation "org.mockito:mockito-core:2.+"
+  testImplementation 'org.springframework:spring-test:5.1.7.RELEASE'
+  testImplementation 'org.springframework.boot:spring-boot-test:2.1.5.RELEASE'
+  testImplementation 'org.springframework.vault:spring-vault-core:2.1.2.RELEASE'
+}
+
+compileJava {
+  options.compilerArgs << '-Apf4j.ignoreExtensionPoint'
+}
