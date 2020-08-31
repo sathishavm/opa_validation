@@ -1,6 +1,6 @@
 [
     {
       "id": "Zendesk.OpaValidationPlugin",
-      "url": "https://raw.githubusercontent.com/sathishavm/opa_validation/master/plugins.json"
+      "url": "https://raw.githubusercontent.com/sathishavm/opa_validation/master/plugin.json"
     }
 ]

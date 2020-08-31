@@ -22,6 +22,6 @@ import lombok.Data;
 @ExtensionConfiguration("zendesk.opaValidation")
 public class OpaValidationConfig {
 
-    private String opafile;
+    public String opafile;
 
 }
